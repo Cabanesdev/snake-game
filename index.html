@@ -4,9 +4,28 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
+		<link rel="stylesheet" href="./style.css" />
+		<link rel="stylesheet" href="./pop-up.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script src="./app.js"></script>
 	</head>
 	<body>
-		<canvas id="drawCanvas" width="600" height="600"></canvas>
+		<div class="main-container">
+			<h1>Snake Game</h1>
+			<canvas id="canvas" width="600" height="600"></canvas>
+			<div class="game-legend">
+				<button id="button">Start Game</button>
+				<h3 id="score">Score: 0</h3>
+			</div>
+		</div>
+		<div class="popup-wrapper">
+			<div class="popup">
+				<div class="popup-close">x</div>
+				<div class="popup-content">
+					<h3>You lose the game :v</h3>
+					<button id="repeatGame">Try Again</button>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
