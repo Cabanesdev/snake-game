@@ -1,7 +1,9 @@
 body {
-	background-image: url(https://image.freepik.com/vector-gratis/fondo-selva-detallada_52683-62631.jpg);
-	background-repeat: no-repeat;
-	background-size: 100vw;
+	background: url(https://image.freepik.com/vector-gratis/fondo-selva-detallada_52683-62631.jpg)
+		no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 	background-size: cover;
 }
 
