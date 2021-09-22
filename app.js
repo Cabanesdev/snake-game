@@ -65,6 +65,7 @@ $(document).ready(function () {
 			tail = { x: positionX, y: positionY };
 			score++;
 			updateScore(score);
+			checkWin();
 			fill_apple();
 		} else {
 			tail = snake_length.pop();
@@ -106,6 +107,13 @@ $(document).ready(function () {
 
 	function updateScore(newScore) {
 		$('#score').text(`Score: ${newScore}`);
+	}
+
+	function checkWin() {
+		let maxScore = Math.pow(width / cellWidth, 2);
+		if (score == maxScore) {
+			alert('Ganaste');
+		}
 	}
 
 	function startGame() {
