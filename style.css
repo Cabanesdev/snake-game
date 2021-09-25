@@ -41,3 +41,41 @@ h3 {
 	background-color: #008000b8;
 	border-radius: 50px;
 }
+
+.buttons-container {
+	padding-top: 50px;
+}
+
+.movements-buttons {
+	width: 100px;
+	height: 100px;
+	margin-left: 7px;
+	color: black;
+}
+
+#left {
+	background-image: url('https://www.pinclipart.com/picdir/middle/184-1840670_back-left-arrow-square-button-outline-comments-down.png');
+	background-size: 100%;
+
+	background-repeat: no-repeat;
+}
+
+#down {
+	background-image: url('https://www.pinclipart.com/picdir/middle/403-4034784_png-file-svg-down-arrow-key-png-clipart.png');
+	background-size: 100%;
+
+	background-repeat: no-repeat;
+}
+
+#up {
+	background-image: url('https://www.nicepng.com/png/full/128-1287679_arrow-top-up-key-comments-server.png');
+	background-size: 100%;
+
+	background-repeat: no-repeat;
+}
+
+#right {
+	background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxbBQXfq7R5FlFHuri5C1OVFUhy8CfIiO5honxTeo275fXDkTwRypBde60e6gquII3xZc&usqp=CAU.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}

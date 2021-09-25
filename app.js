@@ -18,6 +18,7 @@ $(document).ready(function () {
 
 	const popup = document.querySelector('.popup-wrapper');
 
+	//Funcion que crea la serpiente
 	function create_snake() {
 		let length = 1;
 		snake_length = [];
@@ -26,6 +27,7 @@ $(document).ready(function () {
 		}
 	}
 
+	//funcion que crea las manzanas
 	function fill_apple() {
 		apple = {
 			x: Math.round((Math.random() * (width - cellWidth)) / cellWidth),
@@ -33,6 +35,7 @@ $(document).ready(function () {
 		};
 	}
 
+	//Funcion que va "pintando" el juego cada 0.1 segundos
 	function paint() {
 		ctx.fillStyle = 'green';
 		ctx.fillRect(0, 0, width, height);
@@ -83,6 +86,7 @@ $(document).ready(function () {
 		paint_cell(apple.x, apple.y, 'red');
 	}
 
+	//funcion que comprueba si la serpiente se choca con si misma
 	function check_crash(x, y, array) {
 		for (let i = 0; i < array.length; i++) {
 			if (array[i].x == x && array[i].y == y) return true;
@@ -90,6 +94,7 @@ $(document).ready(function () {
 		return false;
 	}
 
+	//funcion que pinta las celdas de la serpiente y de la manzana
 	function paint_cell(x, y, color) {
 		ctx.fillStyle = color;
 		ctx.fillRect(x * cellWidth, y * cellWidth, cellWidth, cellWidth);
@@ -109,6 +114,18 @@ $(document).ready(function () {
 			direction = 'down';
 	});
 
+	$('#left').click(() => {
+		if (direction != 'right') direction = 'left';
+	});
+	$('#down').click(() => {
+		if (direction != 'up') direction = 'down';
+	});
+	$('#up').click(() => {
+		if (direction != 'down') direction = 'up';
+	});
+	$('#right').click(() => {
+		if (direction != 'left') direction = 'right';
+	});
 	function updateScore(newScore) {
 		$('#score').text(`Score: ${newScore}`);
 	}
