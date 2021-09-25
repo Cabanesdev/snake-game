@@ -99,10 +99,14 @@ $(document).ready(function () {
 
 	$(document).keydown(function (e) {
 		let key = e.which;
-		if (key == '37' && direction != 'right') direction = 'left';
-		else if (key == '38' && direction != 'down') direction = 'up';
-		else if (key == '39' && direction != 'left') direction = 'right';
-		else if (key == '40' && direction != 'up') direction = 'down';
+		if ((key == '37' || key == '65') && direction != 'right')
+			direction = 'left';
+		else if ((key == '38' || key == '87') && direction != 'down')
+			direction = 'up';
+		else if ((key == '39' || key == '68') && direction != 'left')
+			direction = 'right';
+		else if ((key == '40' || key == '83') && direction != 'up')
+			direction = 'down';
 	});
 
 	function updateScore(newScore) {
