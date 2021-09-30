@@ -61,6 +61,7 @@ $(document).ready(function () {
 			score = 0;
 			updateScore(score);
 			clearInterval(game_loop);
+			window.removeEventListener('scroll', disableScroll);
 			return;
 		}
 
@@ -141,6 +142,7 @@ $(document).ready(function () {
 		direction = 'right';
 		create_snake();
 		fill_apple();
+		window.addEventListener('scroll', disableScroll);
 
 		score = 0;
 		game_loop = setInterval(paint, 100);
@@ -163,4 +165,8 @@ $(document).ready(function () {
 
 	const button = document.getElementById('button');
 	button.addEventListener('click', startGame);
+
+	function disableScroll() {
+		window.scrollTo(0, 0);
+	}
 });
